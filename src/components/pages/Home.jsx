@@ -1,4 +1,5 @@
 import homeImg from "../../assets/background-home-desktop.jpg";
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -19,9 +20,11 @@ const Home = () => {
           </p>
         </div>
         <div className="flex justify-center items-center">
-          <button className="bg-white text-gray-900 text-2xl font-bold rounded-full w-48 h-48 flex items-center justify-center hover:ring-4 hover:ring-white hover:ring-opacity-50 transition-all duration-300">
+          <Link to = "/destination">
+            <button className="bg-white text-gray-900 text-3xl font-bold rounded-full w-52 h-52 flex items-center justify-center hover:ring-8 hover:ring-white hover:ring-opacity-50 transition-all duration-300">
             Explore 
           </button>
+          </Link>
         </div>
       </div>
     </main>
