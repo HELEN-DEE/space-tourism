@@ -31,7 +31,7 @@ const Destination = () => {
   return (
     <section className="pt-28 px-32 min-h-screen bg-cover bg-center" style={{ backgroundImage: `url(${destinationImg})` }}>
       <div className="flex gap-2 mb-8">
-        <h1 className="text-gray-500 font-bold">01</h1>
+        <h1 className="text-gray-500 font-bold text-xl">01</h1>
         <h1 className="uppercase text-xl text-white">Pick your destination</h1>
       </div>
       <div className="flex ">

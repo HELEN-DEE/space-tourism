@@ -7,10 +7,12 @@ import {
   Outlet
 } from "react-router-dom";
 import Header from "./components/Header";
+// Pages
 import Home from "./components/pages/Home";
 import Destination from "./components/pages/Destination";
 import Crew from "./components/pages/Crew";
 import Technology from "./components/pages/Technology";
+// destination pages
 import Moon from "./components/pages/DestinationPages/Moon";
 import Mars from "./components/pages/DestinationPages/Mars";
 import Europa from "./components/pages/DestinationPages/Europa";
