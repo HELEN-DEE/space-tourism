@@ -1,9 +1,14 @@
 // import planetMoon from "../../../assets/image-moon.png";
-
+import {motion} from 'framer-motion'
 
 const Moon = () => {
   return (
-    <section className="flex text-[#ffffff] justify-end">
+    <motion.section className="flex text-[#ffffff] justify-end"
+    initial={{ opacity: 0, x: 100 }}
+    animate={{ opacity: 1, x: 0 }}
+    exit={{ opacity: 0, x: -100 }}
+    transition={{ duration: 0.7, ease: "easeInOut" }}
+    >
       
       <div className=" ">
         <h1 className="text-7xl uppercase font-[bellefair]">
@@ -33,7 +38,7 @@ const Moon = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

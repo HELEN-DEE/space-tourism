@@ -8,6 +8,12 @@ const navLinks = [
   { number: "03", label: "Technology", path: "/technology" },
 ];
 
+const navActive = ({ isActive }) => {
+  return isActive
+    ? "border-b-2 border-white "
+    : "text-white hover:text-gray-300 ";
+};
+
 const Header = () => {
   return (
     <header className="absolute w-full z-10">
@@ -15,21 +21,26 @@ const Header = () => {
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="w-12 h-12" />
         </div>
-        <div className="flex-grow mx-8 relative">
+
+        {/* <div className="flex-grow mx- relative">
           <hr className="border-gray-600 border-t-[1px] absolute top-1/2 w-full" />
-        </div>
-        <nav className="bg-[#ffffff0a] backdrop-blur-md py-4 px-20">
+        </div> */}
+
+        <nav className="bg-[#ffffff0a] backdrop-blur-md transition-all duration-500 px-20 ">
+        <hr className="border-gray-600 border-t-[1px] absolute top-1/2 left-[-85%] w-[90%]" />
           <ul className="flex gap-8">
             {navLinks.map((link, index) => (
-              <li key={index} className="group">
+              <li key={index} className="">
                 <NavLink
                   to={link.path}
-                  className="flex items-center text-white gap-2 hover:text-gray-300 transition-colors duration-300"
+                  className={({ isActive }) =>
+                    `flex items-center gap-2 transition-colors duration-300 py-5 text-white ${navActive({ isActive })}`
+                  }
                 >
-                  <span className="font-bold">{link.number}</span>
-                  <span className="uppercase text-sm tracking-widest">{link.label}</span>
+                  <p className="font-bold text-[13px]">{link.number}</p>
+                  <p className="uppercase text-[12px] tracking-widest">{link.label}</p>
                 </NavLink>
-                <div className="h-[2px] w-0 bg-white group-hover:w-full transition-all duration-300"></div>
+                
               </li>
             ))}
           </ul>

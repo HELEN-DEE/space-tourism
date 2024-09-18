@@ -5,6 +5,9 @@ import planetMars from "../../assets/image-mars.png";  // Add Mars, Europa, Tita
 import planetEuropa from "../../assets/image-europa.png";
 import planetTitan from "../../assets/image-titan.png";
 
+// framer motiom
+import {motion} from "framer-motion"
+
 // Define your nav links with paths
 const navLinks = [
   { label: "Moon", path: "/destination/moon" },
@@ -29,20 +32,27 @@ const Destination = () => {
   const currentPlanetImage = planetImages[location.pathname] || planetMoon;
 
   return (
-    <section className="pt-28 px-32 min-h-screen bg-cover bg-center" style={{ backgroundImage: `url(${destinationImg})` }}>
+    <div className="pt-28 px-32 min-h-screen bg-cover bg-center" style={{ backgroundImage: `url(${destinationImg})` }}
+      >
+      
       <div className="flex gap-2 mb-8">
         <h1 className="text-gray-500 font-bold text-xl">01</h1>
         <h1 className="uppercase text-xl text-white">Pick your destination</h1>
       </div>
       <div className="flex ">
         {/* Render the image based on the current route */}
-      <img src={currentPlanetImage} alt="Current Planet" className="w-[50%] h-auto pt-4" />
+      <motion.img key={location.pathname} src={currentPlanetImage} alt="Current Planet" className="w-[50%] h-auto pt-4" 
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }} 
+        exit={{ x: 100, opacity: 0 }} 
+        transition={{ duration: 0.7, ease: "easeInOut" }}
+      />
       {/* Nav links for destination */}
         <div className="w-full px-24 ">
           <nav className="mb-10 flex justify-start">
             <ul className="flex gap-8 ">
               {navLinks.map((link, index) => (
-                <li key={index} className='uppercase'>
+                <li key={index} className='uppercase text-[13px]'>
                   <NavLink 
                     to={link.path} 
                     className={({ isActive }) => {
@@ -63,7 +73,7 @@ const Destination = () => {
           <Outlet />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -5,6 +5,9 @@ import crew2 from "../../assets/image-mark-shuttleworth.png";
 import crew3 from "../../assets/image-victor-glover.png";
 import crew4 from "../../assets/image-anousheh-ansari.png";
 
+// Framer motion
+import {motion} from "framer-motion"
+
 const crewMembers = [
   {
     role: "Commander",
@@ -36,19 +39,27 @@ const Crew = () => {
   const [currentMember, setCurrentMember] = useState(0);
 
   return (
-    <section className="bg-cover bg-center min-h-screen pt-28 px-32 flex flex-col" style={{ backgroundImage: `url(${crewImg})` }}>
+    <section className="bg-cover bg-center min-h-screen pt-28 px-32 flex flex-col" style={{ backgroundImage: `url(${crewImg})` }}
+    
+    >
       <div className="flex gap-2 mb-14">
+        
         <h1 className="text-gray-500 font-bold text-xl">02</h1>
         <h1 className="uppercase text-xl text-white">Meet your crew</h1>
       </div>
       
       <div className=" flex ">
         <div className="w-1/2 flex flex-col h-full ">
-          <div className='max-h-52 py-16'>
+          <motion.div key={currentMember} className='max-h-52 py-16'
+            initial={{ x: -100, opacity: 0 }} // Slide in from the right
+            animate={{ x: 0, opacity: 1 }}  // Slide to the center
+            exit={{ x: 100, opacity: 0 }}  // Slide out to the left
+          transition={{ duration: 0.7, ease: "easeInOut" }}
+          >
             <h2 className="text-gray-500 uppercase text-xl mb-2">{crewMembers[currentMember].role}</h2>
             <h3 className="text-white uppercase text-5xl mb-6">{crewMembers[currentMember].name}</h3>
             <p className="text-gray-400  mb-12 max-w-md">{crewMembers[currentMember].bio}</p>
-          </div>
+          </motion.div>
           
           <div className="flex gap-4 mt-48">
             {crewMembers.map((_, index) => (
@@ -62,7 +73,11 @@ const Crew = () => {
         </div>
         
         <div className="w-1/2 flex justify-end items-end">
-          <img 
+          <motion.img key={currentMember}
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.7, ease: "easeInOut" }}
             src={crewMembers[currentMember].image} 
             alt={crewMembers[currentMember].name}
             className="max-h-[70vh] object-contain transition-opacity duration-300"
