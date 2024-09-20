@@ -39,7 +39,7 @@ const Destination = () => {
         <h1 className="text-gray-500 font-bold text-xl">01</h1>
         <h1 className="uppercase text-xl text-white">Pick your destination</h1>
       </div>
-      <div className="flex ">
+      <div className="flex flex-col lg:flex-row items-center">
         {/* Render the image based on the current route */}
       <motion.img key={location.pathname} src={currentPlanetImage} alt="Current Planet" className="w-[50%] h-auto pt-4" 
         initial={{ x: -100, opacity: 0 }}
@@ -49,7 +49,7 @@ const Destination = () => {
       />
       {/* Nav links for destination */}
         <div className="w-full px-24 ">
-          <nav className="mb-10 flex justify-start">
+          <nav className="mb-10 flex lg:justify-start justify-center">
             <ul className="flex gap-8 ">
               {navLinks.map((link, index) => (
                 <li key={index} className='uppercase text-[13px]'>
