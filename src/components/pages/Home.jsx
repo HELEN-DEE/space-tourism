@@ -29,31 +29,32 @@ const Home = () => {
 
   return (
     <section
-      className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center"
+      className="min-h-screen bg-cover bg-center bg-no-repeat flex lg:items-center md:items-center  "
       style={{
         backgroundImage: `url(${getBackgroundImage()})`,
       }}
     >
-      <div className="container mx-auto px-4 md:px-16 lg:px-32 pt-20 md:pt-16 lg:pt-40 flex flex-col lg:flex-row justify-between items-center  lg:space-y-0 space-y-20">
+      <div className=" flex-grow flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 lg:px-40 pt-20  lg:pt-0 gap-6">
         <motion.div 
-          className="lg:max-w-md text-center lg:text-left mb-10 md:mb-0"
+          className="lg:max-w-md text-center lg:text-start mb-20 lg:mb-0 md:mb-0 "
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.7, ease: "easeInOut" }}
         >
-          <h3 className="text-gray-300 uppercase tracking-widest lg:mb-4 md:mb-6 text-base md:text-lg lg:text-xl font-[barlow]">
+          <h3 className="text-gray-300 uppercase tracking-widest lg:mb-4 md:mb-6 mb-8 text-base md:text-lg lg:text-xl font-[barlow]">
             So, you want to travel to
           </h3>
           <h1 className="text-6xl md:text-9xl lg:text-8xl text-white font-extralight mb-6 uppercase">
             Space
           </h1>
-          <p className="text-gray-300 text-sm md:text-xl lg:text-[14px] ">
+          <p className="text-gray-300  md:text-xl lg:text-[14px] ">
             Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well, sit back and relax because we'll give you a truly out-of-this-world experience!
           </p>
         </motion.div>
+
         <motion.div 
-          className="flex justify-center items-center"
+          className="flex justify-center items-center lg:justify-end"
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -100}}

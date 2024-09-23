@@ -32,27 +32,27 @@ const Destination = () => {
   const currentPlanetImage = planetImages[location.pathname] || planetMoon;
 
   return (
-    <div className="pt-28 px-32 min-h-screen bg-cover bg-center" style={{ backgroundImage: `url(${destinationImg})` }}
+    <div className="lg:pt-28 pt-24 md:pt-36 lg:px-32 min-h-screen  bg-cover bg-center" style={{ backgroundImage: `url(${destinationImg})` }}
       >
       
-      <div className="flex gap-2 mb-8">
+      <div className="flex gap-2 mb-8 justify-center lg:justify-start md:justify-start md:px-6  ">
         <h1 className="text-gray-500 font-bold text-xl">01</h1>
-        <h1 className="uppercase text-xl text-white">Pick your destination</h1>
+        <h1 className="uppercase lg:text-xl text-lg text-white">Pick your destination</h1>
       </div>
-      <div className="flex flex-col lg:flex-row items-center">
+      <div className="flex flex-col lg:flex-row items-center ">
         {/* Render the image based on the current route */}
-      <motion.img key={location.pathname} src={currentPlanetImage} alt="Current Planet" className="w-[50%] h-auto pt-4" 
+      <motion.img key={location.pathname} src={currentPlanetImage} alt="Current Planet" className="w-[35%]  md:w-[40%] lg:[50%] h-auto pt-4 mb-7 md:mb-16 lg:mb-0" 
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }} 
         exit={{ x: 100, opacity: 0 }} 
         transition={{ duration: 0.7, ease: "easeInOut" }}
       />
       {/* Nav links for destination */}
-        <div className="w-full px-24 ">
-          <nav className="mb-10 flex lg:justify-start justify-center">
-            <ul className="flex gap-8 ">
+        <div className="w-full lg:px-24 sm:px-8 md:px-16">
+          <nav className="mb-10 flex lg:justify-start justify-center md:mb-14">
+            <ul className="flex sm:gap-6 md:gap-8 gap-4">
               {navLinks.map((link, index) => (
-                <li key={index} className='uppercase text-[13px]'>
+                <li key={index} className='uppercase text-[13px] '>
                   <NavLink 
                     to={link.path} 
                     className={({ isActive }) => {

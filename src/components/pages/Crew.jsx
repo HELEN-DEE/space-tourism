@@ -39,29 +39,29 @@ const Crew = () => {
   const [currentMember, setCurrentMember] = useState(0);
 
   return (
-    <section className="bg-cover bg-center min-h-screen pt-28 px-32 flex flex-col" style={{ backgroundImage: `url(${crewImg})` }}
+    <section className="bg-cover bg-center min-h-screen lg:pt-28 pt-24 md:pt-36 lg:px-32 px-5 flex flex-col" style={{ backgroundImage: `url(${crewImg})` }}
     
     >
-      <div className="flex gap-2 mb-14">
+      <div className="flex gap-2 lg:mb-14 justify-center lg:justify-start md:justify-start md:px-6">
         
         <h1 className="text-gray-500 font-bold text-xl">02</h1>
         <h1 className="uppercase text-xl text-white">Meet your crew</h1>
       </div>
       
-      <div className=" flex ">
-        <div className="w-1/2 flex flex-col h-full ">
-          <motion.div key={currentMember} className='max-h-52 py-16'
+      <div className=" flex flex-col lg:flex-row">
+        <div className="lg:w-1/2 flex flex-col h-full ">
+          <motion.div key={currentMember} className='max-h-52 lg:py-16 py-10 text-center lg:text-start'
             initial={{ x: -100, opacity: 0 }} // Slide in from the right
             animate={{ x: 0, opacity: 1 }}  // Slide to the center
             exit={{ x: 100, opacity: 0 }}  // Slide out to the left
           transition={{ duration: 0.7, ease: "easeInOut" }}
           >
-            <h2 className="text-gray-500 uppercase text-xl mb-2">{crewMembers[currentMember].role}</h2>
-            <h3 className="text-white uppercase text-5xl mb-6">{crewMembers[currentMember].name}</h3>
-            <p className="text-gray-400  mb-12 max-w-md">{crewMembers[currentMember].bio}</p>
+            <h2 className="text-gray-500 uppercase lg:text-xl md:text-xl text-lg mb-2 ">{crewMembers[currentMember].role}</h2>
+            <h3 className="text-white uppercase lg:text-5xl md:text-4xl text-2xl mb-6">{crewMembers[currentMember].name}</h3>
+            <p className="text-gray-400  mb-12 lg:max-w-md md:w-[70%] md:mx-auto md:text-lg">{crewMembers[currentMember].bio}</p>
           </motion.div>
           
-          <div className="flex gap-4 mt-48">
+          <div className="flex gap-4 md:gap-6 lg:mt-48 mt-20 mb-10 lg:mb-0 justify-center lg:justify-start">
             {crewMembers.map((_, index) => (
               <button
                 key={index}
@@ -72,7 +72,7 @@ const Crew = () => {
           </div>
         </div>
         
-        <div className="w-1/2 flex justify-end items-end">
+        <div className="lg:w-1/2  flex justify-end items-end md:justify-center">
           <motion.img key={currentMember}
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
@@ -80,7 +80,7 @@ const Crew = () => {
             transition={{ duration: 0.7, ease: "easeInOut" }}
             src={crewMembers[currentMember].image} 
             alt={crewMembers[currentMember].name}
-            className="max-h-[70vh] object-contain transition-opacity duration-300"
+            className="lg:max-h-[70vh] max-h-[40vh] md:max-h-[60vh] object-contain transition-opacity duration-300"
           />
         </div>
       </div>

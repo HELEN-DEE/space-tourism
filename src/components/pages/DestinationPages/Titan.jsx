@@ -10,16 +10,16 @@ const Titan = () => {
     transition={{ duration: 0.7, ease: "easeInOut" }}
     >
       
-      <div className=" ">
+      <div className=" text-center lg:text-start px-4">
         <h1 className="text-7xl uppercase font-[bellefair]">
           Titan
         </h1>
-        <p className="text-gray-400 leading-relaxed py-4 pb-7">
+        <p className="text-gray-400 leading-relaxed py-4 pb-7 md:w-[80%] md:mx-auto md:text-xl">
         The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.
         </p>
-        <hr className="border-gray-600 border-t-[0.5px]"/>
+        <hr className="border-gray-600 border-t-[0.5px] "/>
           {/* Average distance and travel */}
-        <div className="flex gap-20 uppercase pt-7">
+        <div className="flex lg:gap-20 gap-4 uppercase pt-7 justify-center lg:justify-star flex-col lg:flex-row">
           <div>
             <p className="text-[11px] text-gray-400">
               AVG. DISTANCE
