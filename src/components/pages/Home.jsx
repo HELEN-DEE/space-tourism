@@ -36,7 +36,7 @@ const Home = () => {
     >
       <div className=" flex-grow flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 lg:px-40 pt-20  lg:pt-0 gap-6">
         <motion.div 
-          className="lg:max-w-md text-center lg:text-start mb-20 lg:mb-0 md:mb-0 "
+          className="lg:max-w-md text-center lg:text-start mb-20 lg:mb-0 md:mb-16 "
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 100 }}
@@ -48,7 +48,7 @@ const Home = () => {
           <h1 className="text-6xl md:text-9xl lg:text-8xl text-white font-extralight mb-6 uppercase">
             Space
           </h1>
-          <p className="text-gray-300  md:text-xl lg:text-[14px] ">
+          <p className="text-gray-300  md:text-xl lg:text-[14px] md:w-[80%] md:mx-auto lg:w-auto">
             Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well, sit back and relax because we'll give you a truly out-of-this-world experience!
           </p>
         </motion.div>
