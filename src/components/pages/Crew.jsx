@@ -72,7 +72,7 @@ const Crew = () => {
           </div>
         </div>
         
-        <div className="lg:w-1/2  flex justify-end items-end md:justify-center">
+        <div className="lg:w-1/2  flex lg:justify-end items-end md:justify-center justify-center">
           <motion.img key={currentMember}
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}

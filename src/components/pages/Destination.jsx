@@ -68,6 +68,7 @@ const Destination = () => {
               ))}
             </ul>
           </nav>
+
           {/* Render the image based on the current route */}
           
           <Outlet />
