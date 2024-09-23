@@ -34,7 +34,7 @@ const Home = () => {
         backgroundImage: `url(${getBackgroundImage()})`,
       }}
     >
-      <div className=" flex-grow flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 lg:px-40 pt-20  lg:pt-0 gap-6">
+      <div className=" flex-grow flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 lg:px-40 pt-20  lg:pt-28 gap-6">
         <motion.div 
           className="lg:max-w-md text-center lg:text-start mb-20 lg:mb-0 md:mb-16 "
           initial={{ opacity: 0, x: -100 }}

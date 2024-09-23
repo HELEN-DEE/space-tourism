@@ -58,10 +58,10 @@ const Crew = () => {
           >
             <h2 className="text-gray-500 uppercase lg:text-xl md:text-xl text-lg mb-2 ">{crewMembers[currentMember].role}</h2>
             <h3 className="text-white uppercase lg:text-5xl md:text-4xl text-2xl mb-6">{crewMembers[currentMember].name}</h3>
-            <p className="text-gray-400  mb-12 lg:max-w-md md:w-[70%] md:mx-auto md:text-lg">{crewMembers[currentMember].bio}</p>
+            <p className="text-gray-400  mb-12 lg:max-w-md md:w-[70%] md:mx-auto lg:w-auto lg:mx-0 md:text-lg">{crewMembers[currentMember].bio}</p>
           </motion.div>
           
-          <div className="flex gap-4 md:gap-6 lg:mt-48 mt-20 mb-10 lg:mb-0 justify-center lg:justify-start">
+          <div className="flex gap-4 md:gap-6 lg:gap-4 lg:mt-48 mt-20 mb-10 lg:mb-0 justify-center lg:justify-start">
             {crewMembers.map((_, index) => (
               <button
                 key={index}
