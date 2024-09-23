@@ -49,7 +49,7 @@ const Destination = () => {
       />
       {/* Nav links for destination */}
         <div className="w-full lg:px-24 sm:px-8 md:px-16">
-          <nav className="mb-10 flex lg:justify-start justify-center md:mb-14">
+          <nav className="mb-10 flex lg:justify-start justify-center md:mb-14 lg:px-5">
             <ul className="flex sm:gap-6 md:gap-8 gap-4">
               {navLinks.map((link, index) => (
                 <li key={index} className='uppercase text-[13px] '>

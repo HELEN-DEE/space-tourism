@@ -14,7 +14,7 @@ const Mars = () => {
         <h1 className="text-7xl uppercase font-[bellefair]">
           Mars
         </h1>
-        <p className="text-gray-400 leading-relaxed py-4 pb-7 md:w-[80%] md:mx-auto md:text-xl">
+        <p className="text-gray-400 leading-relaxed py-4 pb-7 lg:w-auto md:w-[80%] md:mx-auto md:text-xl">
         Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!
         </p>
         <hr className="border-gray-600 border-t-[0.5px]"/>

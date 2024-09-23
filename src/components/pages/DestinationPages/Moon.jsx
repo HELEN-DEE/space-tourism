@@ -14,7 +14,7 @@ const Moon = () => {
         <h1 className="lg:text-7xl text-5xl uppercase font-[bellefair]">
           Moon
         </h1>
-        <p className="text-gray-400 leading-relaxed py-4 pb-7 md:w-[80%] md:mx-auto md:text-xl">
+        <p className="text-gray-400 leading-relaxed py-4 pb-7 lg:w-auto md:w-[80%] md:mx-auto md:text-xl">
         See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
         </p>
         <hr className="border-gray-600 border-t-[0.5px]"/>

@@ -57,7 +57,7 @@ const Technology = () => {
           >
               <p className='text-gray-400 text-xl mb-2'>THE TERMINOLOGY...</p>
               <h2 className='text-white lg:text-5xl text-3xl mb-4'>{technologyData[currentTech].name}</h2>
-              <p className='text-gray-400 md:text-xl leading-relaxed md:w-[70%] md:mx-auto'>{technologyData[currentTech].description}</p>
+              <p className='text-gray-400 md:text-xl leading-relaxed lg:w-auto md:w-[70%] md:mx-auto'>{technologyData[currentTech].description}</p>
           </motion.div>
         </div>
 

@@ -14,7 +14,7 @@ const Europa = () => {
         <h1 className="text-7xl uppercase font-[bellefair] ">
           Europa
         </h1>
-        <p className="text-gray-400 leading-relaxed py-4 pb-7 md:w-[80%] md:mx-auto md:text-xl">
+        <p className="text-gray-400 leading-relaxed py-4 pb-7 lg:w-auto  md:w-[80%] md:mx-auto md:text-xl">
         The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.
         </p>
         <hr className="border-gray-600 border-t-[0.5px]"/>
